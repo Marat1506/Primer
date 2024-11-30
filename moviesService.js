@@ -7,10 +7,10 @@ const MoviesSchema = Schema({
     title: String,
     rating: Number,
     comments: Array,
-    directorId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'directors'
-    },
+    // directorId: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'directors'
+    // },
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'categories'
@@ -38,7 +38,7 @@ async function createMovie(req, res) {
             title: req.body.title,
             rating: req.body.rating,
             comments: req.body.comments || [],
-            directorId: req.body.directorId,
+            // directorId: req.body.directorId,
             category: req.body.category || [],
 
         };
